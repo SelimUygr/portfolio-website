@@ -138,11 +138,7 @@
     height: 72rem;
     overflow: hidden;
     border-radius: 1.6rem;
-<<<<<<< HEAD
-    background-image: url("~static/images/work-chace.png");
-=======
-    background-image: url("images/work-chace.png");
->>>>>>> f88ab773532168686fe3385847945948cdcc8cb3
+    background-image: url("~/static/images/work-chace.png");
     background-repeat: repeat-y;
     animation: workHero 150s 2s linear forwards infinite;
     transition: var(--transition);
