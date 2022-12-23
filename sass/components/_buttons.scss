@@ -1,0 +1,55 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  cursor: pointer;
+  padding: 1.4rem 3rem;
+  transition: var(--transition);
+  position: relative;
+  border: 0.2rem solid var(--c-white);
+  border-radius: 5rem;
+  &-txt {
+    line-height: 1em;
+    font-size: var(--txt-rem24);
+    font-weight: 900;
+    color: var(--c-white);
+    text-transform: uppercase;
+    transition: var(--transition);
+  }
+  &-icon {
+    display: flex;
+    align-items: center;
+    margin-left: 1.5rem;
+    transition: var(--transition);
+    .icon {
+      font-size: 1.8rem;
+      color: var(--c-white);
+    }
+  }
+  &--primary-hover {
+    &:hover {
+      background-color: var(--c-primary);
+      border-color: var(--c-primary);
+    }
+  }
+  &--secondary-hover {
+    &:hover {
+      background-color: var(--c-secondary);
+      border-color: var(--c-secondary);
+    }
+  }
+  &--primary {
+    background-color: var(--c-primary);
+    border-color: var(--c-primary);
+  }
+  &--secondary {
+    background-color: var(--c-secondary);
+    border-color: var(--c-secondary);
+  }
+
+  &--centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

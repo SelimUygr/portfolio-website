@@ -1,0 +1,76 @@
+/* Font Sizes */
+
+/* Font Families */
+$font-family-base: "Gotham", sans-serif;
+
+/* Transitions */
+$transition: 0.3s cubic-bezier(0.29, 0.13, 0.27, 0.74);
+$transition-fast: 0.2s cubic-bezier(0.29, 0.13, 0.27, 0.74);
+
+/* Colors */
+$c-black: #000000;
+
+:root {
+  --transition-fast: 0.2s cubic-bezier(0.29, 0.13, 0.27, 0.74);
+  --transition: 0.3s cubic-bezier(0.29, 0.13, 0.27, 0.74);
+  --transition-slow: 0.4s cubic-bezier(0.29, 0.13, 0.27, 0.74);
+  --transition-extraslow: 0.5s cubic-bezier(0.29, 0.13, 0.27, 0.74);
+
+  --c-white: #ffffff;
+  --c-white-alt: #c1c1c1;
+  --c-black: #000000;
+  --c-primary: #ba5857;
+  --c-secondary: #5e5964;
+  --c-paragraph: #aaaaaa;
+  --c-paragraph-alt: #484848;
+  --c-border-color: #7a7b7f;
+
+  // About Skills Border Animation Variables
+  --d: 2500ms;
+  --angle: 90deg;
+  --gradX: 100%;
+  --gradY: 50%;
+  --c1: rgba(168, 239, 255, 1);
+  --c2: rgba(168, 239, 255, 0.1);
+}
+
+.c-white {
+  color: var(--c-white);
+}
+.c-white-alt {
+  color: var(--c-white-alt);
+}
+.c-black {
+  color: var(--c-black);
+}
+.c-primary {
+  color: var(--c-primary);
+}
+.c-secondary {
+  color: var(--c-secondary);
+}
+.c-paragraph {
+  color: var(--c-paragraph);
+}
+.c-paragraph-alt {
+  color: var(--c-paragraph-alt);
+}
+
+// About Skills Border Animation Properties
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 90deg;
+  inherits: true;
+}
+
+@property --gradX {
+  syntax: "<percentage>";
+  initial-value: 50%;
+  inherits: true;
+}
+
+@property --gradY {
+  syntax: "<percentage>";
+  initial-value: 0%;
+  inherits: true;
+}

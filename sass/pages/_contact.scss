@@ -1,0 +1,26 @@
+.contact {
+  &__info {
+    &-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      @include bp(tablet) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 2rem;
+      }
+      &__item {
+        &-title {
+          text-transform: uppercase;
+        }
+        @include bp(tablet) {
+          width: calc(50% - 1rem);
+        }
+        @include bp(tablet-small) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

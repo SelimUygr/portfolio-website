@@ -1,0 +1,113 @@
+:root {
+  --txt-rem128: 12.8rem;
+  --txt-rem64: 6.4rem;
+  --txt-rem48: 4.8rem;
+  --txt-rem32: 3.2rem;
+  --txt-rem30: 3rem;
+  --txt-rem28: 2.8rem;
+  --txt-rem24: 2.4rem;
+  --txt-rem20: 2rem;
+  --txt-rem18: 1.8rem;
+
+  @include bp(laptop) {
+    --txt-rem128: 10.8rem;
+    --txt-rem64: 5.6rem;
+    --txt-rem48: 3.8rem;
+    --txt-rem32: 3.2rem;
+    --txt-rem30: 3rem;
+    --txt-rem28: 2.8rem;
+    --txt-rem24: 2.4rem;
+    --txt-rem20: 2rem;
+    --txt-rem18: 1.8rem;
+  }
+
+  @include bp(desktop) {
+    --txt-rem128: 8.6rem;
+    --txt-rem64: 4.8rem;
+    --txt-rem48: 3.6rem;
+    --txt-rem32: 3rem;
+    --txt-rem30: 2.8rem;
+    --txt-rem28: 2.4rem;
+    --txt-rem24: 2.2rem;
+    --txt-rem20: 2rem;
+    --txt-rem18: 1.8rem;
+  }
+
+  @include bp(tablet) {
+    --txt-rem128: 7.2rem;
+    --txt-rem64: 3.6rem;
+    --txt-rem48: 3.2rem;
+    --txt-rem32: 3rem;
+    --txt-rem30: 2.8rem;
+    --txt-rem28: 2.4rem;
+    --txt-rem24: 2.2rem;
+    --txt-rem20: 2rem;
+    --txt-rem18: 1.8rem;
+  }
+  @include bp(tablet-small) {
+    --txt-rem128: 6.4rem;
+  }
+
+  @include bp(mobile) {
+    --txt-rem128: 4rem;
+    --txt-rem64: 3rem;
+    --txt-rem48: 2.8rem;
+    --txt-rem32: 2.4rem;
+    --txt-rem30: 2.2rem;
+    --txt-rem28: 2rem;
+    --txt-rem24: 1.8rem;
+    --txt-rem20: 1.6rem;
+    --txt-rem18: 1.5rem;
+  }
+}
+.txt {
+  &--rem {
+    &128 {
+      font-size: var(--txt-rem128);
+    }
+    &64 {
+      font-size: var(--txt-rem64);
+    }
+    &48 {
+      font-size: var(--txt-rem48);
+    }
+    &32 {
+      font-size: var(--txt-rem32);
+    }
+    &30 {
+      font-size: var(--txt-rem30);
+    }
+    &28 {
+      font-size: var(--txt-rem28);
+    }
+    &24 {
+      font-size: var(--txt-rem24);
+    }
+    &20 {
+      font-size: var(--txt-rem20);
+    }
+    &18 {
+      font-size: var(--txt-rem18);
+    }
+  }
+  &--font {
+    &300 {
+      font-weight: 300;
+    }
+    &400 {
+      font-weight: 400;
+    }
+    &500 {
+      font-weight: 500;
+    }
+    &600 {
+      font-weight: 600;
+    }
+    &700 {
+      font-weight: 700;
+    }
+    &900 {
+      font-weight: 900;
+    }
+  }
+}

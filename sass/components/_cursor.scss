@@ -1,0 +1,134 @@
+.cursor {
+  pointer-events: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 12rem;
+  height: 12rem;
+  color: var(--c-primary);
+  @include bp(tablet) {
+    display: none;
+  }
+  &:before,
+  &:after {
+    content: "";
+    position: absolute;
+    width: 30rem;
+    height: 30rem;
+    border-radius: 50%;
+    // transition: width var(--transition-slow), height var(--transition-slow),
+    //   background-color var(--transition-slow);
+    transition: var(--transition-slow);
+    filter: blur(5rem);
+    opacity: 0.5;
+  }
+
+  &:before {
+    transform: translate(-25%, -25%);
+    background-color: var(--c-secondary);
+  }
+  &:after {
+    content: "";
+    transform: translate(25%, 25%);
+    background-color: var(--c-primary);
+  }
+
+  &.is-link {
+    transition-delay: 0s;
+    z-index: 999;
+    &:before,
+    &:after {
+      width: 14.4rem;
+      height: 14.4rem;
+      transform: translate(0, 0);
+      background-color: var(--c-primary);
+      opacity: 1;
+      filter: blur(0);
+    }
+
+    .cursor {
+      &__icon {
+        .cursor-icon-link {
+          opacity: 1;
+          visibility: visible;
+          transition-delay: 0.35s !important;
+          transition: var(--transition-slow);
+        }
+      }
+      &__txt {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0.35s !important;
+        transition: var(--transition-slow);
+      }
+    }
+  }
+
+  &.is-drag {
+    transition-delay: 0s;
+    z-index: 3;
+    border: 0.3rem solid var(--c-primary);
+    &:before,
+    &:after {
+      width: 14.4rem;
+      height: 14.4rem;
+      transform: translate(0, 0);
+      background-color: unset;
+      opacity: 1;
+      filter: blur(0);
+    }
+    &:before {
+      top: -4rem;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 2rem;
+      height: 2rem;
+      background-image: url("~/assets/sprite/svg/iconAngle.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+    &:after {
+      bottom: -4rem;
+      left: 50%;
+      transform: translateX(-50%) rotate(180deg);
+      width: 2rem;
+      height: 2rem;
+      background-image: url("~/assets/sprite/svg/iconAngle.svg");
+      background-position: center center;
+      background-repeat: no-repeat;
+    }
+
+    .cursor {
+      &__txt {
+        opacity: 1;
+        visibility: visible;
+        transition-delay: 0.35s !important;
+        transition: var(--transition-slow);
+        color: var(--c-primary);
+        font-weight: 800;
+      }
+    }
+  }
+
+  &__txt {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    z-index: 3;
+    line-height: 1em;
+    font-size: var(--txt-rem20);
+    color: var(--c-white);
+  }
+}

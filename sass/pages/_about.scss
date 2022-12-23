@@ -1,0 +1,140 @@
+.about {
+  &__wrapper {
+    margin-bottom: 18rem;
+    position: relative;
+    @include bp(tablet) {
+      margin-bottom: 8rem;
+    }
+    @include bp(mobile) {
+      margin-bottom: 4rem;
+    }
+  }
+  .col-lg-4 {
+    position: relative;
+  }
+  &__sticky {
+    @include bp(r-tablet) {
+      position: sticky;
+      top: 10rem;
+    }
+  }
+  &__image {
+    border: 0.1rem solid var(--c-white);
+    border-radius: 1.5rem;
+    height: 45rem;
+    position: relative;
+    @include bp(desktop) {
+      height: 35rem;
+    }
+    img {
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      padding: 0 2rem;
+      object-fit: contain;
+      max-height: 50rem;
+      @include bp(tablet) {
+        max-height: 40rem;
+      }
+    }
+  }
+  &__info {
+    &-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      @include bp(tablet-small) {
+        gap: 2rem;
+      }
+      &__item {
+        &:not(:last-child) {
+          margin-bottom: 4rem;
+          @include bp(tablet) {
+            margin-bottom: 0;
+          }
+        }
+        @include bp(tablet) {
+          width: calc(50% - 2rem);
+        }
+        @include bp(tablet-small) {
+          width: 100%;
+        }
+        &-title {
+          text-transform: uppercase;
+        }
+      }
+    }
+    &-languages {
+      &__item {
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+        padding: 2rem;
+        border: 0.3rem solid rgba(#ffffff, 0.2);
+        border-radius: 1.5rem;
+        font-size: var(--txt-rem32);
+        @include bp(tablet) {
+          padding: 1rem;
+          border-width: 0.15rem;
+        }
+        span {
+          font-size: var(--txt-rem24);
+          color: var(--c-paragraph);
+        }
+      }
+    }
+  }
+  &__content {
+    padding-bottom: 3rem;
+    border-bottom: 0.3rem solid rgba(#ffffff, 0.2);
+    @include bp(tablet) {
+      margin-top: 4rem;
+    }
+    &__text {
+      span {
+        font-weight: 700;
+        color: var(--c-primary);
+      }
+    }
+  }
+  &__education {
+    padding: 5rem 0;
+    border-bottom: 0.3rem solid rgba(#ffffff, 0.2);
+    &__wrapper {
+      @include bp(tablet) {
+        display: flex;
+        flex-direction: column;
+        gap: 4rem;
+      }
+    }
+
+    &-item {
+      &:not(:last-child) {
+        margin-bottom: 6rem;
+        @include bp(tablet) {
+          margin-bottom: 0;
+        }
+      }
+      @include bp(tablet) {
+        flex-direction: column;
+        align-items: flex-start !important;
+        justify-content: flex-start;
+      }
+      &__date {
+        margin-right: 10rem;
+        @include bp(desktop) {
+          margin-right: 5rem;
+          flex-shrink: 0;
+        }
+      }
+    }
+  }
+  &__skills {
+    padding: 5rem 0;
+    border-bottom: 0.3rem solid rgba(#ffffff, 0.2);
+  }
+  &__experience {
+    padding-top: 5rem;
+  }
+}

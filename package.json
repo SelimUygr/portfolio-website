@@ -1,0 +1,30 @@
+{
+  "name": "omsuygur.com",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+  },
+  "dependencies": {
+    "@nuxt/image": "^0.7.1",
+    "@nuxtjs/svg-sprite": "^0.5.2",
+    "core-js": "^3.25.3",
+    "gsap": "^3.11.3",
+    "nuxt": "^2.15.8",
+    "swiper": "^8.4.4",
+    "vue": "^2.7.10",
+    "vue-headroom": "^0.10.1",
+    "vue-server-renderer": "^2.7.10",
+    "vue-template-compiler": "^2.7.10"
+  },
+  "devDependencies": {
+    "push-dir": "^0.4.1",
+    "sass": "^1.56.1",
+    "sass-loader": "^8.0.0",
+    "webpack": "^4.46.0"
+  }
+}
